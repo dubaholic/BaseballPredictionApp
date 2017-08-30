@@ -1,0 +1,87 @@
+<html ng-app="baseballApp">
+
+<head>
+    <title>Baseball App</title>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1>Baseball App </h1>
+    <div ng-controller="BaseballCtrl as ctrl">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="aName">Team A name:</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" id="aName" ng-model="ctrl.aName">
+                </div>
+
+                <label class="control-label col-sm-2" for="aWins">Team A wins:</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" id="aWins" ng-model="ctrl.aWins">
+                </div>
+
+                <label class="control-label col-sm-2" for="aLoses">Team A loses:</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" id="aLoses" ng-model="ctrl.aLoses">
+                </div>
+
+                <label class="control-label col-sm-2" for="aPitcherWins">Team A pitcher wins:</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" id="aPitcherWins" ng-model="ctrl.aPitcherWins">
+                </div>
+
+                <label class="control-label col-sm-2" for="aPitcherLoses">Team A pitcher loses:</label>
+                <div class="col-sm-2">
+                    <input class="form-control" type="text" id="aPitcherLoses" ng-model="ctrl.aPitcherLoses">
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+
+        <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="bName">Team B name:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="text" id="bName" ng-model="ctrl.bName">
+                    </div>
+    
+                    <label class="control-label col-sm-2" for="bWins">Team B wins:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="text" id="bWins" ng-model="ctrl.bWins">
+                    </div>
+    
+                    <label class="control-label col-sm-2" for="bLoses">Team B loses:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="text" id="bLoses" ng-model="ctrl.bLoses">
+                    </div>
+    
+                    <label class="control-label col-sm-2" for="bPitcherWins">Team B pitcher wins:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="text" id="bPitcherWins" ng-model="ctrl.bPitcherWins">
+                    </div>
+    
+                    <label class="control-label col-sm-2" for="bPitcherLoses">Team A pitcher loses:</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="text" id="bPitcherLoses" ng-model="ctrl.bPitcherLoses">
+                    </div>
+                </div>
+            </form>
+        <br></br>
+
+        <button ng-click="ctrl.buttonClicked()">Calculate</button>
+
+        <br></br>
+        <span ng-bind="ctrl.resultValue"></span>
+        <br></br>
+        <span ng-bind="ctrl.winningTeam"></span>
+
+    </div>
+</body>
+
+
+</html>
